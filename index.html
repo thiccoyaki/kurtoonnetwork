@@ -6,6 +6,10 @@
 <title>Kurt Denzel P. Agravante — Portfolio</title>
 <meta name="description" content="Kurt Denzel P. Agravante — Analytical & Creative Portfolio. Data automation, AI workflows, YouTube growth, SEO." />
 
+<meta property="og:title" content="Kurt Agravante — Analytical &amp; Creative Portfolio" />
+<meta property="og:description" content="AI automation builder. 500M+ YouTube views, ~1.5M subscribers, tools built end-to-end." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0a0e0a" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,8 +38,8 @@
     --border:       #1f2a22;
     --border-hot:   #2a3a30;
     --text:         #d4e6d8;
-    --text-dim:     #6e8276;
-    --text-faint:   #3d4a42;
+    --text-dim:     #8aa092;
+    --text-faint:   #73887b;
     --accent:       #00ff9c;
     --accent-2:     #4adef0;
     --accent-warn:  #ffd166;
@@ -52,11 +56,11 @@
     --bg-2:         #ebe1d0;
     --surface:      #fff7e9;
     --border:       #d9c9a8;
-    --border-hot:   #c7501f;
+    --border-hot:   #a9441a;
     --text:         #2a1810;
     --text-dim:     #6b4a35;
-    --text-faint:   #a08570;
-    --accent:       #c7501f;
+    --text-faint:   #7d5f45;
+    --accent:       #a9441a;
     --accent-2:     #d4a437;
     --accent-warn:  #6b4a35;
     --font-display: 'Fraunces', serif;
@@ -211,7 +215,7 @@
 
   @media (max-width: 720px) {
     .mode-toggle button { padding: 10px 18px; font-size: 12px; }
-    .toggle-hint-text { font-size: 10px; }
+    .toggle-hint-text { font-size: 11px; }
   }
 
   /* ============================================================
@@ -317,7 +321,7 @@
     background: var(--surface);
   }
   :root[data-mode="analytical"] .hero-stats .label {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--text-faint);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -525,7 +529,7 @@
   }
   .case-tags span {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     padding: 4px 10px;
     border: 1px solid var(--border);
     color: var(--text-dim);
@@ -554,7 +558,7 @@
   }
   .case-metric .l {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--text-faint);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -670,7 +674,7 @@
   }
   .site-card .site-label {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -707,7 +711,7 @@
   .nsfw-warning .badge {
     display: inline-block;
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     padding: 4px 10px;
     background: var(--accent-warn);
@@ -748,7 +752,7 @@
   .nsfw-panel.revealed .nsfw-content { display: block; }
   .nsfw-content .label {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--accent-warn);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -759,7 +763,7 @@
   }
   .nsfw-close {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--text-dim);
     cursor: pointer;
     letter-spacing: 0.1em;
@@ -873,7 +877,7 @@
     top: 12px;
     left: 12px;
     font-family: var(--font-display);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.12em;
     color: #fff;
     background: rgba(0,0,0,0.5);
@@ -942,7 +946,7 @@
     top: 16px;
     left: 16px;
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.12em;
     color: #fff;
     background: rgba(0,0,0,0.5);
@@ -980,7 +984,7 @@
   }
   .analytics-panel .ap-tag {
     font-family: var(--font-display);
-    font-size: 10px;
+    font-size: 11px;
     color: var(--accent);
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1246,15 +1250,49 @@
   }
   @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
 
+  /* ============================================================
+     ACCESSIBILITY & INTERACTION POLISH
+     ============================================================ */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .mode-toggle button:focus-visible { outline-offset: 2px; border-radius: 999px; }
+  .mode-toggle button { min-height: 44px; }
+  .mode-toggle button:hover { color: var(--text); }
+  .navlinks a { padding: 10px 4px; transition: color .2s ease; }
+  .btn { min-height: 44px; }
+  .nsfw-btn, .nsfw-close { min-height: 44px; padding-left: 16px; padding-right: 16px; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  img { max-width: 100%; }
+
+  @media (max-width: 720px) {
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    .topbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .navlinks { display: flex !important; flex-wrap: wrap; gap: 4px 16px; }
+    .case:hover { padding-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+
 </style>
 </head>
 <body>
 
 <!-- ============================ MODE TOGGLE ============================ -->
 <div class="mode-toggle-wrap" id="toggleWrap">
-  <div class="mode-toggle" role="tablist" aria-label="Portfolio mode">
-    <button data-target="analytical" aria-label="Analytical mode">Analytical</button>
-    <button data-target="creative" aria-label="Creative mode">Creative</button>
+  <div class="mode-toggle" role="group" aria-label="Portfolio mode">
+    <button data-target="analytical" aria-pressed="true">Analytical</button>
+    <button data-target="creative" aria-pressed="false">Creative</button>
   </div>
   <div class="toggle-hint" id="toggleHint">
     <span class="toggle-hint-arrow">▲</span>
@@ -1550,7 +1588,7 @@
     <div class="sites-grid">
       <a class="site-card" href="https://laidtex.com/" target="_blank" rel="noopener">
         <div class="site-favicon">
-          <img src="https://www.google.com/s2/favicons?domain=laidtex.com&sz=64" alt="Laidtex logo"
+          <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=laidtex.com&sz=64" alt="Laidtex logo"
                onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>L</span>'" />
         </div>
         <span class="site-label">Shopify · SEO · Paid Media</span>
@@ -1560,7 +1598,7 @@
       </a>
       <a class="site-card" href="https://slimvive.com/" target="_blank" rel="noopener">
         <div class="site-favicon">
-          <img src="https://www.google.com/s2/favicons?domain=slimvive.com&sz=64" alt="Slimvive logo"
+          <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=slimvive.com&sz=64" alt="Slimvive logo"
                onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>S</span>'" />
         </div>
         <span class="site-label">Shopify · SEO · Automation</span>
@@ -1588,7 +1626,7 @@
         <div class="sites-grid">
           <a class="site-card" href="https://lovegasm.co/" target="_blank" rel="noopener">
             <div class="site-favicon">
-              <img src="https://www.google.com/s2/favicons?domain=lovegasm.co&sz=64" alt="Lovegasm logo"
+              <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=lovegasm.co&sz=64" alt="Lovegasm logo"
                    onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>L</span>'" />
             </div>
             <span class="site-label">Shopify · SEO · Email</span>
@@ -1598,7 +1636,7 @@
           </a>
           <a class="site-card" href="https://lockthecock.com/" target="_blank" rel="noopener">
             <div class="site-favicon">
-              <img src="https://www.google.com/s2/favicons?domain=lockthecock.com&sz=64" alt="Lockthecock logo"
+              <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=lockthecock.com&sz=64" alt="Lockthecock logo"
                    onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>L</span>'" />
             </div>
             <span class="site-label">Shopify · SEO · Paid Media</span>
@@ -1608,7 +1646,7 @@
           </a>
           <a class="site-card" href="https://loveplugs.co/" target="_blank" rel="noopener">
             <div class="site-favicon">
-              <img src="https://www.google.com/s2/favicons?domain=loveplugs.co&sz=64" alt="Loveplugs logo"
+              <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=loveplugs.co&sz=64" alt="Loveplugs logo"
                    onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>L</span>'" />
             </div>
             <span class="site-label">Shopify · SEO · Automation</span>
@@ -1653,20 +1691,20 @@
         <span class="niche-note">Curiosity hooks · fast-paced reveals</span>
       </div>
       <div class="shorts-grid">
-        <a class="short-embed" href="https://youtube.com/shorts/Wgy_yYHF2kA" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/Wgy_yYHF2kA" target="_blank" rel="noopener" aria-label="Watch video 1 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/Wgy_yYHF2kA/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/Gi6SLLbPEQI" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/Gi6SLLbPEQI" target="_blank" rel="noopener" aria-label="Watch video 2 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/Gi6SLLbPEQI/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/fPS_PP83aFg" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/fPS_PP83aFg" target="_blank" rel="noopener" aria-label="Watch video 3 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/fPS_PP83aFg/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
       </div>
     </div>
@@ -1679,20 +1717,20 @@
         <span class="niche-note">Cinematic Roblox scenes · narrative-driven</span>
       </div>
       <div class="shorts-grid">
-        <a class="short-embed" href="https://youtube.com/shorts/fShLOOP4Os8" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/fShLOOP4Os8" target="_blank" rel="noopener" aria-label="Watch video 4 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/fShLOOP4Os8/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/U3PFK5ZwYmc" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/U3PFK5ZwYmc" target="_blank" rel="noopener" aria-label="Watch video 5 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/U3PFK5ZwYmc/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/T01kGXQ71Qs" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/T01kGXQ71Qs" target="_blank" rel="noopener" aria-label="Watch video 6 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/T01kGXQ71Qs/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
       </div>
     </div>
@@ -1705,25 +1743,25 @@
         <span class="niche-note">Edutainment shorts · music-driven storytelling</span>
       </div>
       <div class="shorts-grid">
-        <a class="short-embed" href="https://youtube.com/shorts/IxiSJeItelc" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/IxiSJeItelc" target="_blank" rel="noopener" aria-label="Watch video 7 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/IxiSJeItelc/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/8iGhTucjfYE" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/8iGhTucjfYE" target="_blank" rel="noopener" aria-label="Watch video 8 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/8iGhTucjfYE/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/z73p1T2URxI" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/z73p1T2URxI" target="_blank" rel="noopener" aria-label="Watch video 9 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/z73p1T2URxI/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
-        <a class="short-embed" href="https://youtube.com/shorts/kiav6k3Ok5Q" target="_blank" rel="noopener">
+        <a class="short-embed" href="https://youtube.com/shorts/kiav6k3Ok5Q" target="_blank" rel="noopener" aria-label="Watch video 10 on YouTube (opens in new tab)">
           <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/kiav6k3Ok5Q/hqdefault.jpg')"></div>
           <span class="badge-yt">SHORT</span>
-          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
         </a>
       </div>
     </div>
@@ -1735,10 +1773,10 @@
         <h3>Long-Form Animation Infotainment</h3>
         <span class="niche-note">AI-animated storytelling · long-form retention</span>
       </div>
-      <a class="long-embed" href="https://youtu.be/4lm2w4vhiJE" target="_blank" rel="noopener">
+      <a class="long-embed" href="https://youtu.be/4lm2w4vhiJE" target="_blank" rel="noopener" aria-label="Watch video 11 on YouTube (opens in new tab)">
         <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/4lm2w4vhiJE/maxresdefault.jpg')"></div>
         <span class="badge-yt">LONG-FORM</span>
-        <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </a>
     </div>
 
@@ -1751,7 +1789,7 @@
       </div>
       <a class="site-card" href="https://www.youtube.com/@rank3shorts" target="_blank" rel="noopener" style="max-width: 420px;">
         <div class="site-favicon">
-          <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube logo"
+          <img width="44" height="44" loading="lazy" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="YouTube logo"
                onerror="this.parentNode.innerHTML='<span class=&quot;site-favicon-fallback&quot;>YT</span>'" />
         </div>
         <span class="site-label">YouTube · Built From Scratch</span>
@@ -1767,7 +1805,7 @@
         <span class="ap-title">Largest Channel — 2025 Analytics</span>
         <span class="ap-tag">Receipts</span>
       </div>
-      <img src="analytics-2025.png"
+      <img src="analytics-2025.png" width="2203" height="898" loading="lazy" decoding="async"
            alt="2025 YouTube channel analytics: 101.5M views, 426K watch hours, +768.6K subscribers" />
       <div class="ap-caption">Full-year performance from the largest self-owned channel (Jan 1 – Dec 31, 2025) · 908,889 total subscribers at snapshot.</div>
     </div>
@@ -1776,7 +1814,7 @@
         <span class="ap-title">2026 Analytics — Year to Date</span>
         <span class="ap-tag">Receipts</span>
       </div>
-      <img src="analytics-2026.png"
+      <img src="analytics-2026.png" width="1151" height="735" loading="lazy" decoding="async"
            alt="2026 year-to-date YouTube channel analytics: 288.1M views, 2.5M watch hours, +238.7K subscribers" />
       <div class="ap-caption">Jan 1 – Oct 2026 · 288M+ views and 2.5M watch hours in under ten months.</div>
     </div>
@@ -1947,6 +1985,7 @@
   function applyMode(mode) {
     currentMode = mode;
     root.setAttribute('data-mode', mode);
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.target === mode)));
     const c = modeCopy[mode];
     document.getElementById('heroPromptText').textContent = c.heroPromptText;
     document.getElementById('heroTitle').innerHTML = c.heroTitle;
